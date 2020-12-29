@@ -1,0 +1,45 @@
+<html>
+<head>
+    <title>{{loc}} time</title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <!--background image-->
+    <div style="background-image: url('{{image}}');
+         height:100%;
+         background-position: center;
+         background-repeat: no-repeat;
+         background-size: cover;">
+
+	<!--content-->
+    <h1>{{loc}}, {{region}}</h1>
+    <h2>local time: {{localtime}}</h2>
+    <h4>{{timezone}} timezone</h4>
+
+
+	<!--weather search bar-->
+<div id="tfheader">
+        <h4>find a city's current weather</h4>
+		<form id="tfnewsearch" method="get" action="http://127.0.0.1:5000/weather">
+		        <input type="text" class="tftextinput" name="location" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
+		</form>
+	<div class="tfclear"></div>
+	</div>
+
+	<!--timezone search bar-->
+    <div id="tfheader">
+        <h4>find a city's current time</h4>
+		<form id="tfnewsearch" method="get" action="http://127.0.0.1:5000/time">
+		        <input type="text" class="tftextinput" name="location" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
+		</form>
+	<div class="tfclear"></div>
+	</div>
+
+    <!--back to home-->
+        <a href="http://127.0.0.1:5000/">
+    <img src="http://www.funamo.com/themes/funamo-theme/images/home_button.png" alt="return home!" style="width:140px;height:60px;">
+    </a>
+
+    </div>
+</body>
+</html>

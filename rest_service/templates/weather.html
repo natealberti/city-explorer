@@ -1,0 +1,50 @@
+<html>
+<head>
+    <title>{{loc}} weather</title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <!--background image-->
+    <div style="background-image: url('{{image}}');
+         height:100%;
+         background-position: center;
+         background-repeat: no-repeat;
+         background-size: cover;">
+
+    <!--content-->
+    <h1>{{loc}}, {{region}} weather</h1>
+        <h4>{{time}} local time</h4>
+    <h3>{{temp_f}} fahrenheit</h3>
+    <h3>{{temp_c}} celcius</h3>
+    <h2>{{desc}}</h2>
+    <!--weather icon-->
+    <div class="prints" align="left">
+        <img src="{{source}}" align="left">
+    </div>
+
+    <!--weather search bar-->
+<div id="tfheader">
+        <h3>find a city's current weather</h3>
+		<form id="tfnewsearch" method="get" action="http://127.0.0.1:5000/weather">
+		        <input type="text" class="tftextinput" name="location" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
+		</form>
+	<div class="tfclear"></div>
+	</div>
+
+    <!--timezone search bar-->
+    <div id="tfheader">
+        <h3>find a city's current time</h3>
+		<form id="tfnewsearch" method="get" action="http://127.0.0.1:5000/time">
+		        <input type="text" class="tftextinput" name="location" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
+		</form>
+	<div class="tfclear"></div>
+	</div>
+
+    <!--back to home-->
+        <a href="http://127.0.0.1:5000/">
+    <img src="http://www.funamo.com/themes/funamo-theme/images/home_button.png" alt="return home!" style="width:140px;height:60px;">
+    </a>
+    </div>
+
+</body>
+</html>
